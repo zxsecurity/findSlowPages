@@ -1,5 +1,10 @@
 This is a tool which will help you find slow pages. Currently this only works with HTTP GET requests.
 
+PreReq
+* Python
+* wget
+* sqlite3 - `sudo apt install sqlite3`
+
 Here is a basic workflow
 1. wget --spider --force-html -r -l1 https://example.com/ 2>&1 | grep -o 'http.*' > urls.txt
 1. ./getTimes.py
